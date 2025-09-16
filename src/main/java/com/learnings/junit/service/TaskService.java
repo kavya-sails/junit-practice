@@ -16,4 +16,14 @@ public class TaskService {
                 .filter(task -> task.contains(filterStr))
                 .toList();
     }
+
+    public void deleteTask(String task) {
+        List<String> allTasks = taskRepo.getTasks();
+        for(String task2 : allTasks) {
+            if(task.equals(task2)) {
+                taskRepo.deleteTask(task2);
+            }
+        }
+    }
+
 }

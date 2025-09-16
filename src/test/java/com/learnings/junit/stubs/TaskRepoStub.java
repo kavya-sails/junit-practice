@@ -10,4 +10,9 @@ public class TaskRepoStub implements TaskRepo {
     public List<String> getTasks() {
         return List.of("task1", "task2", "task3","task12","task13");
     }
+
+    @Override
+    public void deleteTask(String task) {
+
+    }
 }
